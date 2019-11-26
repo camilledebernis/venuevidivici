@@ -1,9 +1,4 @@
 Rails.application.routes.draw do
-  get 'venues/index'
-  get 'venues/show'
-  get 'venues/new'
-  get 'venues/create'
-  get 'venues/destroy'
   devise_for :bookings
   devise_for :venues
   devise_for :users
