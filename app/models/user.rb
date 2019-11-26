@@ -3,4 +3,14 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  validates :name, presence: true, allow_blank: false
+  validates :email, presence: true, allow_blank: false, uniqueness: true
+  validates :encrypted_password, presence: true, allow_blank: false
+
+  has_many :bookings
+  has_many :venues, through: :bookings
+
+  # This is a quickfix. Refactor it
+  has_many :owned_venues, foreign_key: 'owner_id', class_name: 'Venue'
 end
