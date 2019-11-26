@@ -1,3 +1,4 @@
+
 <div class="container">
   <div class="d-flex justify-content-end">
     <p class="d-flex align-items-center">host your vvvenue</p>
@@ -16,3 +17,10 @@
     </div>
   </div>
 </div>
+<%= simple_form_for :search,  url: venues_path , :method => :get do |f| %>
+    <%= f.input :query, :autofocus => true %>
+    <%= f.submit "Search" %>
+<% end %>
+
+<%= link_to 'sign out', destroy_user_session_path, method: :delete  %>
+
