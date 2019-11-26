@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :venues, only: [:new, :create, :index, :show, :destroy]
-  get
+
   #devise_for :bookings
   #devise_for :venues
   devise_for :users
