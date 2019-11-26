@@ -11,6 +11,5 @@ class User < ApplicationRecord
   has_many :bookings
   has_many :venues, through: :bookings
 
-  # This is a quickfix. Refactor it
   has_many :owned_venues, foreign_key: 'owner_id', class_name: 'Venue'
 end
