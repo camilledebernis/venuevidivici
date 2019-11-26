@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :bookings
   devise_for :venues
   devise_for :users
   root to: 'pages#home'
