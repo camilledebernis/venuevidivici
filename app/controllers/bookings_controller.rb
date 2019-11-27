@@ -13,7 +13,6 @@ class BookingsController < ApplicationController
     if @booking.save
       redirect_to venues_path
     else
-      # binding.pry
       render "venues/show"
     end
 
