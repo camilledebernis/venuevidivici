@@ -1,26 +1,41 @@
 
 <div class="container">
-  <div class="d-flex justify-content-end">
-    <p class="d-flex align-items-center">host your vvvenue</p>
-    <%= cl_image_tag("danielle-the-bartender_uc7vck", :cloud_name => 'danielcastro',
-      radius: 25, width: 50, height: 50, crop: :thumb, gravity: :face) %>
-  </div>
-  <div class="d-flex align-items-center">
-    <%= cl_image_tag("logo_spqr_laurel_", :cloud_name => 'danielcastro', width: 300) %>
+  <div class="row justify-content-end align-items-center">
+    <!-- <div class="d-flex align-items-center"> optional , but Daniel prefer without-->
     <div>
-      <h1>VENUE.VIDI.VICI</h1>
-      <div class=“topnav”>
-        <input type=“text” placeholder="Search a vvvenue...">
-        <button type=“button” class=“btn btn-outline-secondary”>Search</button>
+      <%= link_to 'host your vvvenue', destroy_user_session_path, method: :delete  %><!--  link here needs to be changed -->
+    </div>
+    <div class="mx-3">
+      <%= cl_image_tag("danielle-the-bartender_uc7vck", :cloud_name => 'danielcastro',
+        radius: 25, width: 50, height: 50, crop: :thumb, gravity: :face) %>
+    </div>
+    <div>
+      <%= link_to 'sign out', destroy_user_session_path, method: :delete  %>
+    </div>
+  </div>
 
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- <div class="col-sm|md-4"> optional , but Daniel prefer without-->
+      <div class="col">
+        <%= cl_image_tag("logo_spqr_laurel_", :cloud_name => 'danielcastro', width: 300) %>
+      </div>
+      <!-- <div class="col-sm|md-4"> optional, but Daniel prefer without -->
+      <div class="col">
+        <h1>VENUE.VIDI.VICI</h1>
+        <div class=“topnav”>
+          <%= simple_form_for :search, url: venues_path , :method => :get do |f| %>
+              <%= f.input :query, label: 'Where?', wrapper_html: { class: 'username' }, placeholder: 'vvvenue', hint: 'or anywhere in the world', :autofocus => true %>
+              <%= f.submit "Search" %>
+          <% end %>
+        </div>
+      </div>
+      <div class="col">
+        <!-- nada aqui, apenas para manter 3 colunas -->
       </div>
     </div>
   </div>
 </div>
-<%= simple_form_for :search,  url: venues_path , :method => :get do |f| %>
-    <%= f.input :query, :autofocus => true %>
-    <%= f.submit "Search" %>
-<% end %>
 
-<%= link_to 'sign out', destroy_user_session_path, method: :delete  %>
+
 
