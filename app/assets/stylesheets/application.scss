@@ -48,10 +48,11 @@
 }
 
 #background {
-  background-image: url("https://res.cloudinary.com/danielcastro/image/upload/v1574883992/Christmas-Party-2019-header_tpz1yz.jpg")
+  min-height: 100vh;
+  background-image: url("https://res.cloudinary.com/danielcastro/image/upload/v1574883992/seductive-night-time_cmfs36.png");
 }
 
-h1 {
-  color: #FF0;
-  font-size: 94px;
-}
+// h1 {
+//   color: #FFF;
+//   font-size: 64px;
+// }
