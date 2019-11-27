@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
-  resources :bookings, only: [:new, :create, :index, :show, :destroy]
-  resources :venues, only: [:new, :create, :index, :show, :destroy]
+  resources :venues, only: [:new, :create, :index, :show, :destroy] do
+    resources :bookings, only: [:create]
+  end
 
   #devise_for :bookings
   #devise_for :venues
