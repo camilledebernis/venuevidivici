@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :bookings, only: [:new, :create, :index, :show, :destroy]
   resources :venues, only: [:new, :create, :index, :show, :destroy]
 
   #devise_for :bookings
