@@ -14,7 +14,7 @@ class VenuesController < ApplicationController
   def create
     @venue = Venue.new(venue_params)
     if @venue.save
-      redirect_to venue_path(@venue)
+      redirect_to new_venue_path(@venue)
     else
       render :new
     end
