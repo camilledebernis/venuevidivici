@@ -1,20 +1,16 @@
 <div class="container">
   <div class="sidenav">
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <%= cl_image_tag("logo_spqr_laurel_bg", :cloud_name => 'danielcastro', width: 100) %>
+    <a href="#">search</a>
+    <a href="#">dashboard</a>
+    <a href="#">host your vvvenue</a>
   </div>
 </div>
 
 <div class="main">
 
-<h1>Venues#index</h1>
-<p>here come all searched vvvenues</p>
-
-  <div class="btn btn-secondary mb-5">
-    <%= link_to 'Venue Card', venue_path(:id) %>
-  </div>
+<h1>Paris</h1>
+<p>here are all the vvvenues for "Paris"</p>
 
   <div class="container d-flex align-items-center">
    <div class="col">
@@ -23,8 +19,9 @@
         <div>
         <!-- <a href="#" class="stretched-link"></a> -->
           <%= cl_image_tag("poolindoor_crujji", :cloud_name => 'danielcastro', :height=>200, :width=>200, :crop=>"fill") %>
-          <h5 class="card-title">Poolindoor</h5>
-          <%= link_to'know more', venue_path(:id) %>
+          <h5 class="card-title pl-3">Poolindoor
+          <br>
+          <%= link_to'know more', venue_path(:id) %></h5>
           <!-- <a href="#" class="btn btn-primary">See VVVenue Description</a> -->
         </div>
       </div>
@@ -35,8 +32,9 @@
         <div>
         <!-- <a href="#" class="stretched-link"></a> -->
           <%= cl_image_tag("street_festival_syipf1", :cloud_name => 'danielcastro', :height=>200, :width=>200, :crop=>"fill") %>
-          <h5 class="card-title">Street festival</h5>
-          <%= link_to 'know more', venue_path(:id) %>
+          <h5 class="card-title pl-3">Street Festival
+          <br>
+          <%= link_to 'know more', venue_path(2) %></h5>
           <!-- <a href="#" class="btn btn-primary">See VVVenue Description</a> -->
         </div>
       </div>
@@ -47,14 +45,15 @@
         <div>
         <!-- <a href="#" class="stretched-link"></a> -->
           <%= cl_image_tag("elegant_vligti", :cloud_name => 'danielcastro', :height=>200, :width=>200, :crop=>"fill") %>
-          <h5 class="card-title">Elegant party</h5>
-          <%= link_to 'know more', venue_path(:id) %>
+          <h5 class="card-title pl-3">Elegant Party
+          <br>
+          <%= link_to 'know more', venue_path(:id) %></h5>
           <!-- <a href="#" class="btn btn-primary">See VVVenue Description</a> -->
         </div>
       </div>
     </div>
   </div>
-  <div>
+  <div class="mt-5">
     <%= link_to 'Go back', root_path, class: 'btn btn-primary'  %>
   </div>
 </div>
