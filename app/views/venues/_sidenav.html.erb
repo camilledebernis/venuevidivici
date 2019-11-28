@@ -1,8 +1,10 @@
 <div class="container">
-  <div class="sidenav">
-    <%= link_to cl_image_tag("logo_spqr_laurel_bg", :cloud_name => 'danielcastro', width: 100), root_path %>
-    <%= link_to 'search', root_path %>
-    <a href="venues/my_own">dashboard</a>
-    <a href="venues/new">host your vvvenue</a>
+    <div class="sidenav">
+      <%= link_to cl_image_tag("logo_spqr_laurel_bg", :cloud_name => 'danielcastro', width: 100), root_path %>
+      <%= link_to 'search', root_path %>
+      <!-- <a href="venues/my_own">dashboard</a> -->
+      <%= link_to 'Dashboard', my_own_path %>
+      <%= link_to 'Host your vvvenue', new_venue_path %>
+      <!-- <a href="venues/new">host your vvvenue</a> -->
   </div>
 </div>
