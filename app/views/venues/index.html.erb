@@ -2,8 +2,13 @@
 
 <div class="main">
 
-<h1>Paris</h1>  <!-- need to fix this hard code for Paris -->
-<p>here are all the vvvenues for "Paris"</p> <!-- need to fix this hard code for Paris -->
+<% if params[:search][:query] == "" %>
+  <h1><%= "All Locations" %></h1>
+  <p>Here are all available vvvenues</p>
+<% else %>
+  <h1><%= params[:search][:query] %></h1>
+  <p>Here are all the vvvenues for "<%= params[:search][:query] %>"</p>
+<% end %>
 
   <div class="container d-flex align-items-center">
    <div class="col">
