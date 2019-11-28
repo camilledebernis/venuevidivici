@@ -4,6 +4,9 @@
       <%= link_to 'search', root_path %>
       <a href="venues/my_own">dashboard</a>
       <a href="venues/new">host your vvvenue</a>
+      <% if current_user %>
+        <%= link_to "My bookings", bookings_path %>
+      <% end %>
   </div>
 </div>
 
