@@ -4,12 +4,14 @@
       <div class="a">
         <%= link_to 'rent your vvvenue', new_venue_path, method: :get %><!--  link here needs to be changed -->
       </div>
+
       <div class="mx-3">
         <%= cl_image_tag("danielle-the-bartender_uc7vck", :cloud_name => 'danielcastro',
         radius: 25, width: 50, height: 50, crop: :thumb, gravity: :face) %>
       </div>
       <div class="a">
         <%= link_to 'sign out', destroy_user_session_path, method: :delete  %>
+
       </div>
     </div>
     <div class="container">
@@ -25,6 +27,22 @@
             <%= f.submit "Search for vvvenues" %>
             <% end %>
           </div>
+          
+             <!-- we have this option below, that is a HTML form insted of simple_form! Andre did it -->
+
+          <!-- <div class="“topnav”">
+            <form novalidate="novalidate" class="simple_form search" action="/venues" accept-charset="UTF-8" method="get">
+              <input name="utf8" type="hidden" value="✓">
+              <div class="form-group string required search_query username">
+                <label class="string required" for="search_query">Where do you want to host? <abbr title="required">*</abbr></label>
+                <input class="form-control string required" autofocus="autofocus" placeholder="type a place" type="text" name="search" id="search_query">
+              </div>
+              <input type="submit" name="commit" value="Search" data-disable-with="Search">
+            </form>
+           </div> -->
+
+        <!-- finishes here -->
+          
         </div>
         <div class="col"></div>
       </div>

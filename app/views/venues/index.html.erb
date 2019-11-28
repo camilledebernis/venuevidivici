@@ -2,42 +2,33 @@
 
 <div class="main">
 
-<h1>Paris</h1>  <!-- need to fix this hard code for Paris -->
-<p>here are all the vvvenues for "Paris"</p> <!-- need to fix this hard code for Paris -->
+<% if params[:search][:query] == "" %>
+  <h1><%= "All Locations" %></h1>
+  <p>Here are all available vvvenues</p>
+<% else %>
+  <h1><%= params[:search][:query] %></h1>
+  <p>Here are all the vvvenues for "<%= params[:search][:query] %>"</p>
+<% end %>
 
   <div class="container d-flex align-items-center">
-   <div class="col">
-      <div class="card" style="width:200px">
-        <div>
-          <%= cl_image_tag("poolindoor_crujji", :cloud_name => 'danielcastro', :height=>200, :width=>200, :crop=>"fill") %>
-          <h5 class="card-title pl-3">Poolindoor
-          <br>
-          <%= link_to'know more', venue_path(:id) %></h5>
-          <p>920€</p>
+    <div class="row">
+      <% @venues.each do |venue| %>
+        <div class="col-4">
+          <div class="card">
+            <div>
+              <% if venue.image %>
+                <%= cl_image_tag(venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+              <% else %>
+                <%= cl_image_tag("https://www.paodeacucar.com/img/uploads/1/7/607007.png?type=product", class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+              <% end %>
+              <h5 class="card-title pl-3"><%= venue.title %>
+              <br>
+              <%= link_to'know more', venue %></h5>
+              <p><%= venue.price %>€</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width:200px">
-        <div>
-          <%= cl_image_tag("street_festival_syipf1", :cloud_name => 'danielcastro', :height=>200, :width=>200, :crop=>"fill") %>
-          <h5 class="card-title pl-3">Street Festival
-          <br>
-          <%= link_to 'know more', venue_path(Venue.second) %></h5>
-          <p>800€</p>
-        </div>
-      </div>
-    </div>
-    <div class="col">
-      <div class="card" style="width:200px">
-        <div>
-          <%= cl_image_tag("elegant_vligti", :cloud_name => 'danielcastro', :height=>200, :width=>200, :crop=>"fill") %>
-          <h5 class="card-title pl-3">Elegant Party
-          <br>
-          <%= link_to 'know more', venue_path(:id) %></h5>
-          <p>650€</p>
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
   <div class="mt-5">
