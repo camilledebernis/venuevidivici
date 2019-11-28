@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
+  get "venues/my_own", to: "venues#my_own", as: :my_own
   resources :venues, only: [:new, :create, :index, :show, :destroy] do
     resources :bookings, only: [:create]
   end
   resources :bookings, only: [:index, :show]
-
   #devise_for :bookings
   #devise_for :venues
   devise_for :users

@@ -1,0 +1,31 @@
+<%= render "venues/sidenav" %>
+
+<div class="main">
+  <br></br>
+  <h2>Hi <%= current_user.name %>, here are your created Venues:</h2>
+  <br></br>
+  <div class="container d-flex align-items-center">
+    <div class="row">
+      <% @my_venues.each do |venue| %>
+      <div class="col-4">
+        <div class="card">
+          <div>
+            <% if venue.imgurl %>
+            <%= cl_image_tag(venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+            <% else %>
+            <%= cl_image_tag("https://www.paodeacucar.com/img/uploads/1/7/607007.png?type=product", class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+            <% end %>
+            <h5 class="card-title pl-3"><%= venue.title %>
+              <br>
+              <%= link_to'know more', venue %></h5>
+              <p><%= venue.price %>€</p>
+          </div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+  <div class="mt-5">
+    <%= link_to 'Go back', venues_path(@veunes), class: 'btn btn-primary'  %>
+  </div>
+</div>
