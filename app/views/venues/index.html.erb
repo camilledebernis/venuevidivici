@@ -11,7 +11,11 @@
         <div class="col-4">
           <div class="card">
             <div>
-              <%= cl_image_tag("poolindoor_crujji", class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+              <% if venue.image %>
+                <%= cl_image_tag(venue.image, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+              <% else %>
+                <%= cl_image_tag("https://www.paodeacucar.com/img/uploads/1/7/607007.png?type=product", class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+              <% end %>
               <h5 class="card-title pl-3"><%= venue.title %>
               <br>
               <%= link_to'know more', venue %></h5>
