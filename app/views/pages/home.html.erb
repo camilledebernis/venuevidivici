@@ -19,11 +19,26 @@
       <div class="col">
         <h1>VENUE.VIDI.VICI</h1>
         <div class=“topnav”>
-          <%= simple_form_for :search, url: venues_path , :method => :get do |f| %>
-            <%= f.input :query, label: 'Where do you want to host?', wrapper_html: { class: 'username' }, placeholder: 'type a place', :autofocus => true %>
+          <%= simple_form_for :search, url: venues_path , method: :get do |f| %>
+            <%= f.input :query, label: 'Where do you want to host?', wrapper_html: { class: 'username' }, placeholder: 'type a place', autofocus: true %>
             <%= f.submit "Search" %>
           <% end %>
         </div>
+
+        <!-- we have this option below, that is a HTML form insted of simple_form! Andre did it -->
+
+          <!-- <div class="“topnav”">
+            <form novalidate="novalidate" class="simple_form search" action="/venues" accept-charset="UTF-8" method="get">
+              <input name="utf8" type="hidden" value="✓">
+              <div class="form-group string required search_query username">
+                <label class="string required" for="search_query">Where do you want to host? <abbr title="required">*</abbr></label>
+                <input class="form-control string required" autofocus="autofocus" placeholder="type a place" type="text" name="search" id="search_query">
+              </div>
+              <input type="submit" name="commit" value="Search" data-disable-with="Search">
+            </form>
+           </div> -->
+
+        <!-- finishes here -->
       </div>
       <div class="col">
       </div>
