@@ -1,31 +1,32 @@
-<div class="container" background-color="#FFF">
-  <div class="row justify-content-end align-items-center">
-    <div>
-      <%= link_to 'host your vvvenue', new_venue_path, method: :get %><!--  link here needs to be changed -->
-    </div>
-    <div class="mx-3">
-      <%= cl_image_tag("danielle-the-bartender_uc7vck", :cloud_name => 'danielcastro',
-        radius: 25, width: 50, height: 50, crop: :thumb, gravity: :face) %>
-    </div>
-    <div>
-      <%= link_to 'sign out', destroy_user_session_path, method: :delete  %>
-    </div>
-  </div>
+<div id="background", style="background-image: linear-gradient(rgba(0, 0, 255, 0.5))">
   <div class="container">
-    <div class="row align-items-center">
-      <div class="col">
-        <%= cl_image_tag("logo_spqr_laurel_", :cloud_name => 'danielcastro', width: 300) %>
+    <div class="row justify-content-end align-items-center">
+      <div class="a">
+        <%= link_to 'rent your vvvenue', new_venue_path, method: :get %><!--  link here needs to be changed -->
       </div>
-      <div class="col">
-        <h1>VENUE.VIDI.VICI</h1>
-        <div class=“topnav”>
-          <%= simple_form_for :search, url: venues_path , :method => :get do |f| %>
-            <%= f.input :query, label: 'Where do you want to host?', wrapper_html: { class: 'username' }, placeholder: 'type a place', :autofocus => true %>
-            <%= f.submit "Search" %>
-          <% end %>
+      <div class="mx-3">
+        <%= cl_image_tag("danielle-the-bartender_uc7vck", :cloud_name => 'danielcastro',
+        radius: 25, width: 50, height: 50, crop: :thumb, gravity: :face) %>
+      </div>
+      <div class="a">
+        <%= link_to 'sign out', destroy_user_session_path, method: :delete  %>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col">
+          <%= cl_image_tag("logo_spqr_laurel_", :cloud_name => 'danielcastro', width: 300) %>
         </div>
-      </div>
-      <div class="col">
+        <div class="col">
+          <h1>VENUE.VIDI.VICI</h1>
+          <div class=“topnav”>
+            <%= simple_form_for :search, url: venues_path , :method => :get do |f| %>
+            <%= f.input :query, label: 'Where would you like to host your event?', wrapper_html: { class: 'username' }, placeholder: 'Enter a city, a neighborhood', :autofocus => true %>
+            <%= f.submit "Search for vvvenues" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="col"></div>
       </div>
     </div>
   </div>

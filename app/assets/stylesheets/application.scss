@@ -12,6 +12,18 @@
 @import "components/index";
 @import "pages/index";
 
+.a {
+    color: white;
+    text-decoration: none;
+}
+
+.a:hover
+{
+     color:gray;
+     text-decoration:none;
+     cursor:pointer;
+}
+
 .sidenav {
   height: 100%; /* Full-height: remove this if you want "auto" height */
   width: 160px; /* Set the width of the sidebar */
@@ -53,7 +65,8 @@
   background-color: rgba(43, 165, 137, 0.45);
 }
 
+
 #background {
-  min-height: 100vh;
-  background-image: url("https://res.cloudinary.com/danielcastro/image/upload/v1574883992/seductive-night-time_cmfs36.png");
+  background-size: cover;
+  background-image: url("https://res.cloudinary.com/danielcastro/image/upload/v1574953240/VVVenue%20HP/cropped-cropped-IMG_5753-copy-bw_cmz820.jpg")
 }
