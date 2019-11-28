@@ -6,8 +6,8 @@
       </div>
 
       <div class="mx-3">
-        <%= cl_image_tag("danielle-the-bartender_uc7vck", :cloud_name => 'danielcastro',
-        radius: 25, width: 50, height: 50, crop: :thumb, gravity: :face) %>
+        <%= cl_image_tag("danielle-the-bartender_uc7vck", :cloud_name => 'danielcastro', width: 50, height: 50,
+                          crop: :thumb, gravity: :face, class: "rounded-circle") %>
       </div>
       <div class="a">
         <%= link_to 'sign out', destroy_user_session_path, method: :delete  %>
@@ -27,7 +27,7 @@
             <%= f.submit "Search for vvvenues" %>
             <% end %>
           </div>
-          
+
              <!-- we have this option below, that is a HTML form insted of simple_form! Andre did it -->
 
           <!-- <div class="“topnav”">
@@ -42,7 +42,7 @@
            </div> -->
 
         <!-- finishes here -->
-          
+
         </div>
         <div class="col"></div>
       </div>
