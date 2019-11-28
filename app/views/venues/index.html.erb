@@ -14,7 +14,7 @@
     <div class="row">
       <% @venues.each do |venue| %>
         <div class="col-4">
-          <div class="card">
+          <div class="card p-3">
             <div>
               <% if venue.imgurl %>
                 <%= cl_image_tag(venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>

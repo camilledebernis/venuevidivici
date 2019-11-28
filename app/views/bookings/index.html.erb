@@ -1,0 +1,25 @@
+<%= render "venues/sidenav" %>
+
+<div class="main">
+
+  <h1>Showing <%= @user.name %>'s bookings</h1>
+
+  <br>
+
+  <div class="row">
+    <% @bookings.each do |booking| %>
+      <div class="col-4">
+        <%= link_to booking_path(booking), class: "booking-card" do %>
+          <div class="card m-1">
+            <h5><%= booking.venue.title %></h5>
+            <%= cl_image_tag(booking.venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %></p>
+            <p>From: <strong> <%= booking.start_on.strftime("%d-%b-%Y") %></strong></p>
+            <p>To: <strong><%= booking.end_on.strftime("%d-%b-%Y") %></strong></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+  <%=link_to 'Go back', bookings_path, class: "btn btn-primary mt-5"  %>
+</div>
+
