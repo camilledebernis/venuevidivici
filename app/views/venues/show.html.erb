@@ -6,7 +6,7 @@
    <div class="col">
       <div class="card" style="width:200px">
         <div>
-          <%= cl_image_tag("street_festival_syipf1", :cloud_name => 'danielcastro', :height=>300, :width=>300, :crop=>"fill") %>
+          <%= cl_image_tag("street_festival_syipf1", cloud_name: 'danielcastro', height: 300, width: 300, crop: "fill") %>
         </div>
       </div>
     </div>
@@ -25,7 +25,8 @@
     </div>
   </div>
   <div class="mt-5">
-    <%= link_to 'Go back', venues_path, class: 'btn btn-primary' %>
+    <%= link_to 'Go back', venues_path(:search => {query: ""}), class: 'btn btn-primary' %>
+    <%# link_to 'Go back', venues_path(:search => {query: @venue.place}), class: 'btn btn-primary' %>
   </div>
 
 

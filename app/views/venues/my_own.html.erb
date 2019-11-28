@@ -2,6 +2,7 @@
 
 <div class="main">
   <br></br>
+  <h2>there will go the avatar and sign buttons ------></h2>
   <h2>Hi <%= current_user.name %>, here are your created Venues:</h2>
   <br></br>
   <div class="container d-flex align-items-center">
@@ -26,6 +27,6 @@
     </div>
   </div>
   <div class="mt-5">
-    <%= link_to 'Go back', venues_path(@veunes), class: 'btn btn-primary'  %>
+    <%= link_to 'Go back', venues_path(:search => {query: ""}), class: 'btn btn-primary'  %>
   </div>
 </div>
