@@ -10,12 +10,17 @@ class BookingsController < ApplicationController
     # Venue
     @booking.venue = @venue
 
+    # if @booking.save
+    #   redirect_to venues_path
+    # else
+    #   render "venues/show"
+    # end
+
     if @booking.save
-      redirect_to venues_path
+
     else
       render "venues/show"
     end
-
   end
 
   private
