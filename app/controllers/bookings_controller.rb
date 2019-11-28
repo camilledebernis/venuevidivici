@@ -17,7 +17,7 @@ class BookingsController < ApplicationController
     # end
 
     if @booking.save
-
+      # redirect_to venue_path(@venue)
     else
       render "venues/show"
     end
