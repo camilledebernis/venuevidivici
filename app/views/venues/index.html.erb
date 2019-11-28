@@ -2,14 +2,13 @@
 
 <div class="main">
 
-<% if params[:search][:query] == "" %>
-  <h1><%= "All Locations" %></h1>
-  <p>Here are all available vvvenues</p>
-<% else %>
-  <h1><%= params[:search][:query] %></h1>
-  <p>Here are all the vvvenues for "<%= params[:search][:query] %>"</p>
-<% end %>
-
+  <% if params[:search][:query] == "" %>
+    <h1><%= "All Locations" %></h1>
+    <p>Here are all available vvvenues</p>
+  <% else %>
+    <h1><%= params[:search][:query] %></h1>
+    <p>Here are all the vvvenues for "<%= params[:search][:query] %>"</p>
+  <% end %>
   <div class="container d-flex align-items-center">
     <div class="row">
       <% @venues.each do |venue| %>
@@ -19,12 +18,17 @@
               <% if venue.imgurl %>
                 <%= cl_image_tag(venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
               <% else %>
-                <%= cl_image_tag("https://www.paodeacucar.com/img/uploads/1/7/607007.png?type=product", class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+                <%= image_tag "padeacucar-img.png", :height=>200, :width=>400, :crop=>"fill" %>
               <% end %>
-              <h5 class="card-title pl-3"><%= venue.title %>
-              <br>
-              <%= link_to'know more', venue %></h5>
-              <p><%= venue.price %>€</p>
+              <h5 class="px-3"><%= venue.title %></h5>
+              <div class="d-flex">
+                <div class="col pl-3">
+                  <h5><%= link_to'know more', venue %></h5>
+                </div>
+                <div class="col" style="text-align: right;">
+                  <p><%= venue.price %>€ / per day</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
