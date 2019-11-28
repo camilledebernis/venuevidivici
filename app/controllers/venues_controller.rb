@@ -16,7 +16,7 @@ class VenuesController < ApplicationController
     @venue = Venue.new(venue_params)
     @venue.owner = current_user
     if @venue.save
-      redirect_to venues_path
+      redirect_to my_own_path
     else
       render :new
     end
@@ -27,6 +27,10 @@ class VenuesController < ApplicationController
     @venue.destroy
 
     redirect_to @venue.user
+  end
+
+  def my_own
+    @my_venues = Venue.where(user_id: current_user.id)
   end
 
   private
