@@ -8,8 +8,8 @@
   <h1><%= "all results" %></h1>
   <p>here are all available vvvenues for your search</p>
   <% else %>
-  <h1><%= params[:search][:query].lowercase %></h1>
-  <p>here are all the vvvenues for "<%= params[:search][:query].lowercase %>"</p>
+  <h1><%= params[:search][:query].downcase %></h1>
+  <p>here are all the vvvenues for "<%= params[:search][:query].downcase %>"</p>
   <% end %>
   <div class="container cards-grid">
     <% @venues.each do |venue| %>
