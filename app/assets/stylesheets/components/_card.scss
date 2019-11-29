@@ -3,3 +3,36 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
 }
+
+.card {
+  .card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+
+  .card-remove-link {
+    color: white;
+    border-radius: 50%;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    opacity: 0;
+    transform: rotate(45deg);
+    font-weight: bold;
+    font-size: 20px;
+    &:hover {
+      color: #ff3030;
+      text-decoration: none;
+      opacity: 1;
+    }
+  }
+}
