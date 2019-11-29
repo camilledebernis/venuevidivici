@@ -58,10 +58,13 @@
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
-  color: $logoyellow;
+  color: white;
   display: block;
-  line-height: 2;
+  line-height: 1;
+  text-align: left;
+
 }
+
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
   color: $logolightgray;

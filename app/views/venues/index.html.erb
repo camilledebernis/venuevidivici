@@ -5,11 +5,11 @@
   <!-- <div class="d-flex justify-content-between">...</div> -->
 
   <% if params[:search][:query] == "" %>
-  <h1><%= "All Locations" %></h1>
-  <p>Here are all available vvvenues</p>
+  <h1><%= "all results" %></h1>
+  <p>here are all available vvvenues for your search</p>
   <% else %>
-  <h1><%= params[:search][:query].capitalize %></h1>
-  <p>Here are all the vvvenues for "<%= params[:search][:query].capitalize %>"</p>
+  <h1><%= params[:search][:query].lowercase %></h1>
+  <p>here are all the vvvenues for "<%= params[:search][:query].lowercase %>"</p>
   <% end %>
   <div class="container cards-grid">
     <% @venues.each do |venue| %>
@@ -39,6 +39,6 @@
     <% end %>
   </div>
   <div class="mt-5">
-    <%= link_to 'Go back', root_path, class: 'btn btn-primary'  %>
+    <%= link_to 'go back to search', root_path, class: 'btn btn-secondary'  %>
   </div>
 </div>
