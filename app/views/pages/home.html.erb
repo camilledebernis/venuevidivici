@@ -2,7 +2,11 @@
   <!--  /style="background-image: linear-gradient(rgba(0, 0, 255, 0), rgba(0, 0, 255, 1))" -->
   <div class="row justify-content-end align-items-center mr-5">
     <div class="a mr-3">
-      <%= link_to 'rent your vvvenue', new_venue_path, method: :get, class: "no-style" %><!--  link here needs to be changed -->
+      <% if current_user %>
+        <%= link_to 'rent your vvvenue', new_venue_path, method: :get, class: "no-style" %><!--  link here needs to be changed -->
+      <% else %>
+        <%= link_to 'rent your vvvenue', new_user_session_path, method: :get, class: "no-style" %><!--  link here needs to be changed -->
+      <% end %>
     </div>
     <% if current_user %>
       <div class="mr-3">
