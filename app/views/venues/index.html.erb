@@ -3,38 +3,40 @@
 
 <div class="main">
 
-<!-- <div class="d-flex justify-content-between">...</div> -->
+  <!-- <div class="d-flex justify-content-between">...</div> -->
 
   <% if params[:search][:query] == "" %>
-    <h1><%= "All Locations" %></h1>
-    <p>Here are all available vvvenues</p>
+  <h1><%= "All Locations" %></h1>
+  <p>Here are all available vvvenues</p>
   <% else %>
-    <h1><%= params[:search][:query].capitalize %></h1>
-    <p>Here are all the vvvenues for "<%= params[:search][:query].capitalize %>"</p>
+  <h1><%= params[:search][:query].capitalize %></h1>
+  <p>Here are all the vvvenues for "<%= params[:search][:query].capitalize %>"</p>
   <% end %>
   <div class="container d-flex align-items-center">
     <div class="row">
       <% @venues.each do |venue| %>
-        <div class="col-4">
-          <div class="card p-3">
-            <div>
-              <% if venue.imgurl %>
-                <%= cl_image_tag(venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
-              <% else %>
-                <%= image_tag "padeacucar-img.png", :height=>200, :width=>400, :crop=>"fill" %>
-              <% end %>
-              <h5 class="px-3"><%= venue.title %></h5>
-              <div class="d-flex">
-                <div class="col pl-3">
-                  <h5><%= link_to'Read more & Book', venue %></h5>
-                </div>
-                <div class="col" style="text-align: right;">
-                  <p><%= venue.price %>€ / per day</p>
-                </div>
+      <div class="col-4">
+        <%= link_to venue_path(venue) do %>
+        <div class="card p-3 linkable">
+          <div>
+            <% if venue.imgurl %>
+            <%= cl_image_tag(venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+            <% else %>
+            <%= image_tag "padeacucar-img.png", :height=>200, :width=>400, :crop=>"fill" %>
+            <% end %>
+            <h5 class="px-3 py-2 black_tag"><%= venue.title %></h5>
+            <div class="d-flex">
+              <div class="col pl-3">
+                <h5><%= 'See & Book' %></h5>
+              </div>
+              <div class="col" style="text-align: right;">
+                <p class="black_tag"><%= venue.price %>€ / per day</p>
               </div>
             </div>
           </div>
         </div>
+        <% end %>
+      </div>
       <% end %>
     </div>
   </div>
