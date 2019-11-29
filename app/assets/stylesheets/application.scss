@@ -11,7 +11,7 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
--1-written-logo {
+.h1-written-logo {
   color: white;
   font-size: 70px;
   text-align: center;
@@ -96,6 +96,12 @@ a.booking-card:hover {
   text-decoration: none;
 }
 
-.host-banner {
 
+.linkable:hover {
+  background-color: $logolightgray;
 }
+
+.black_tag {
+  color: black;
+}
+
