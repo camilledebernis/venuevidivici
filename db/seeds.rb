@@ -21,43 +21,43 @@ cal = User.create(name: "Calvin", email: "calvin@gmail.com", password: "calvinAn
 
 puts 'Creating venues...'
 Venue.create(title: 'Huge Place!', description: 'Amazing venue near Eiffel Tower',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574955120/VVVenue%20Venues/huge_place.jpg",
+  imgurl: "VVVenue%20Venues/huge_place",
   address: '23 Place de la Madeleine', price: 800, user_id: cal.id)
 
 Venue.create(title: 'Small but cozy', description: 'Elegant and intimate!',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/small_cozy.jpg",
+  imgurl: "VVVenue%20Venues/small_cozy",
   address: '54 Faubourg Saint Honoré', price: 300, user_id: cal.id)
 
 Venue.create(title: 'Bar', description: 'Nice bar for your party.',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/nice_bar_for_your_party.jpg",
+  imgurl: "VVVenue%20Venues/nice_bar_for_your_party",
   address: '59 rue La Boétie', price: 350, user_id: you.id)
 
 Venue.create(title: 'Stadium', description: 'Organize your match here!',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/stadium.jpg",
+  imgurl: "VVVenue%20Venues/stadium",
   address: '93200 Saint-Denis', price: 1500, user_id: bob.id)
 
 Venue.create(title: 'Big open area', description: 'Outdoors partying',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574955120/VVVenue%20Venues/big_open_area.jpg",
+  imgurl: "VVVenue%20Venues/big_open_area",
   address: '79 place de Miremont', price: 700, user_id: bob.id)
 
 Venue.create(title: 'Club', description: 'With pools and sports fields!',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/club_with_pool_and_sport_field.jpg",
+  imgurl: "VVVenue%20Venues/club_with_pool_and_sport_field",
   address: '30 rue Nationale', price: 950, user_id: ana.id)
 
 Venue.create(title: 'Dance Club', description: 'Great for dubstep parties',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/club.jpg",
+  imgurl: "VVVenue%20Venues/club",
   address: '92 Square de la Couronne', price: 750, user_id: bob.id)
 
 Venue.create(title: 'Triplex', description: 'Big apartment with great dependencies',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/triplex.jpg",
+  imgurl: "VVVenue%20Venues/triplex",
   address: '1259 James Avenue', price: 450, user_id: you.id)
 
 Venue.create(title: 'Open field', description: 'Great for festivals!',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/open_field.jpg",
+  imgurl: "VVVenue%20Venues/open_field",
   address: '3629 Fantages Way', price: 800, user_id: ana.id)
 
 Venue.create(title: 'Backyard', description: '10 people max',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954967/VVVenue%20Venues/backyard.jpg",
+  imgurl: "VVVenue%20Venues/backyard",
   address: '836 Nash Street', price: 150, user_id: ana.id)
 
 puts 'DONE'
