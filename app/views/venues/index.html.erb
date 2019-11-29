@@ -32,6 +32,9 @@
             </div>
           </div>
         </div>
+           <% if current_user %>
+             <%= link_to "+", venue_path(venue), method: :delete, data: { confirm: "You are about to delete this Venue. Are you sure?" }, class: "card-remove-link", id: "sweet-alert-destroy" %>
+           <% end %>
       <% end %>
     <% end %>
   </div>
