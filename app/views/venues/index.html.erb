@@ -9,8 +9,8 @@
     <h1><%= "All Locations" %></h1>
     <p>Here are all available vvvenues</p>
   <% else %>
-    <h1><%= params[:search][:query] %></h1>
-    <p>Here are all the vvvenues for "<%= params[:search][:query] %>"</p>
+    <h1><%= params[:search][:query].capitalize %></h1>
+    <p>Here are all the vvvenues for "<%= params[:search][:query].capitalize %>"</p>
   <% end %>
   <div class="container d-flex align-items-center">
     <div class="row">
