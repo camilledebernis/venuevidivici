@@ -19,9 +19,9 @@
         <div class="card p-3 linkable">
           <div>
             <% if venue.imgurl %>
-            <%= cl_image_tag(venue.imgurl, class: 'img-fluid', :cloud_name => 'danielcastro', :height=>200, :width=>400, :crop=>"fill") %>
+            <%= cl_image_tag(venue.imgurl, class: 'img-fluid', cloud_name: 'danielcastro', crop: "fill") %>
             <% else %>
-            <%= image_tag "padeacucar-img.png", :height=>200, :width=>200, :crop=>"fill" %>
+            <%= image_tag "padeacucar-img.png", crop: "fill" %>
             <% end %>
             <h5 class="px-3 py-2 black_tag"><%= venue.title %></h5>
             <div class="d-flex">
