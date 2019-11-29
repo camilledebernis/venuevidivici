@@ -11,22 +11,20 @@
   <h1><%= params[:search][:query].capitalize %></h1>
   <p>Here are all the vvvenues for "<%= params[:search][:query].capitalize %>"</p>
   <% end %>
-  <div class="container d-flex align-items-center">
-    <div class="row">
-      <% @venues.each do |venue| %>
-      <div class="col-4">
-        <%= link_to venue_path(venue) do %>
+  <div class="container cards-grid">
+    <% @venues.each do |venue| %>
+      <%= link_to venue_path(venue) do %>
         <div class="card p-3 linkable">
           <div>
             <% if venue.imgurl %>
-            <%= cl_image_tag(venue.imgurl, class: 'img-fluid', cloud_name: 'danielcastro', crop: "fill") %>
+            <%= cl_image_tag(venue.imgurl, class: 'img-fluid', cloud_name: 'danielcastro', crop: "fill", width: 400, height: 200) %>
             <% else %>
             <%= image_tag "padeacucar-img.png", crop: "fill" %>
             <% end %>
-            <h5 class="px-3 py-2 black_tag"><%= venue.title %></h5>
+            <h5 class="px-3 py-2 black_tag"></h5>
             <div class="d-flex">
               <div class="col pl-3">
-                <h5><%= 'See & Book' %></h5>
+                <h5 class="h5-venue-title"><%= venue.title %></h5>
               </div>
               <div class="col" style="text-align: right;">
                 <p class="black_tag"><%= venue.price %>€ / per day</p>
@@ -34,10 +32,8 @@
             </div>
           </div>
         </div>
-        <% end %>
-      </div>
       <% end %>
-    </div>
+    <% end %>
   </div>
   <div class="mt-5">
     <%= link_to 'Go back', root_path, class: 'btn btn-primary'  %>
