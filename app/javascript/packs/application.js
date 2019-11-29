@@ -15,14 +15,16 @@ initSweetalert('#sweet-alert-demo', {
   }
 });
 
-
-// initSweetalert('#sweet-alert-demo', {
-//   title: "Are you sure?",
-//   text: "This action cannot be reversed",
-//   icon: "warning"
+// initSweetalert('#sweet-alert-destroy', {
+//   title: "Attention!",
+//   text: "You are about to delete this venue! Continue?",
+//   icon: "warning",
+//   button: "Got it!",
+//   closeOnClickOutside: false
 // }, (value) => {
 //   if (value) {
 //     const link = document.querySelector('#go-to-link');
 //     link.click();
 //   }
 // });
+

@@ -26,7 +26,7 @@ class VenuesController < ApplicationController
     @venue = Venue.find(params[:id])
     @venue.destroy
 
-    redirect_to @venue.user
+    redirect_to venues_path(:search => { query: "" })
   end
 
   def my_own
