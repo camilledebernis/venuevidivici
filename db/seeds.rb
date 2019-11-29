@@ -60,8 +60,4 @@ Venue.create(title: 'Backyard', description: '10 people max',
   imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954967/VVVenue%20Venues/backyard.jpg",
   address: '836 Nash Street', price: 150, user_id: ana.id)
 
-Venue.create(title: 'PaodeAcucar', description: 'lots of fruits',
-  address: 'qq lugar perto de vc', price: 150, user_id: ana.id)
-
-
 puts 'DONE'

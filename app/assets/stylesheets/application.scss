@@ -11,7 +11,6 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-
 .h1-written-logo {
   color: white;
   font-size: 70px;
@@ -55,7 +54,7 @@
 
 /* The navigation menu links */
 .sidenav a {
-  padding: 20px 8px 0;
+  padding: 0 8px 16px;
   text-decoration: none;
   font-size: 14px;
   font-weight: bold;
@@ -98,10 +97,6 @@ a.booking-card:hover {
 }
 
 
-.host-banner {
-
-}
-
 .linkable:hover {
   background-color: $logolightgray;
 }
@@ -109,3 +104,4 @@ a.booking-card:hover {
 .black_tag {
   color: black;
 }
+
