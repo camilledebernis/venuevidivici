@@ -2,8 +2,8 @@
     <div class="sidenav">
       <%= link_to cl_image_tag("logo_spqr_laurel_bg", :cloud_name => 'danielcastro', width: 100), root_path %>
       <%= link_to 'search', root_path %>
-      <a href="venues/my_own">dashboard</a>
-      <a href="venues/new">host your vvvenue</a>
+      <a href="venues/my_own">dashboard</a> <!-- needs a change here -->
+      <%= link_to 'rent your vvvenue', new_venue_path, method: :get %>
       <% if current_user %>
         <%= link_to "My bookings", bookings_path %>
       <% end %>
