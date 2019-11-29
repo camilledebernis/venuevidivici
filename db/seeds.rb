@@ -21,11 +21,11 @@ cal = User.create(name: "Calvin", email: "calvin@gmail.com", password: "calvinAn
 
 puts 'Creating venues...'
 Venue.create(title: 'Huge Place!', description: 'Amazing venue near Eiffel Tower',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574955120/VVVenue%20Venues/big_open_area.jpg",
+  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574955120/VVVenue%20Venues/huge_place.jpg",
   address: '23 Place de la Madeleine', price: 800, user_id: cal.id)
 
 Venue.create(title: 'Small but cozy', description: 'Elegant and intimate!',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/triplex.jpg",
+  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/small_cozy.jpg",
   address: '54 Faubourg Saint Honoré', price: 300, user_id: cal.id)
 
 Venue.create(title: 'Bar', description: 'Nice bar for your party.',
@@ -33,7 +33,7 @@ Venue.create(title: 'Bar', description: 'Nice bar for your party.',
   address: '59 rue La Boétie', price: 350, user_id: you.id)
 
 Venue.create(title: 'Stadium', description: 'Organize your match here!',
-  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/open_field.jpg",
+  imgurl: "https://res.cloudinary.com/danielcastro/image/upload/v1574954968/VVVenue%20Venues/stadium.jpg",
   address: '93200 Saint-Denis', price: 1500, user_id: bob.id)
 
 Venue.create(title: 'Big open area', description: 'Outdoors partying',
